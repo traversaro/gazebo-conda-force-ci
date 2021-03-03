@@ -26,6 +26,7 @@ jobs:
       shell: bash -l {0}
       run: |
         git clone https://github.com/traversaro/gazebo
+        cd gazebo
         git checkout patch-3
 
     - uses: conda-incubator/setup-miniconda@v2
