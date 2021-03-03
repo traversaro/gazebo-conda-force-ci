@@ -42,7 +42,7 @@ jobs:
         # Compilation related dependencies 
         mamba install cmake compilers make ninja pkg-config
         # Actual dependencies
-        mamba install libprotobuf libsdformat libignition-cmake2 libignition-math6 libignition-transport8 libignition-common3 libignition-fuel-tools4 qt ogre=1.10 freeimage curl tbb-devel qwt tinyxml2 tinyxml boost-cpp libcurl ffmpeg 
+        mamba install libprotobuf libsdformat libignition-cmake2 libignition-math6 libignition-transport8 libignition-common3 libignition-fuel-tools4 qt ogre=1.10 freeimage curl tbb-devel=2020.3 qwt tinyxml2 tinyxml boost-cpp libcurl ffmpeg 
  
     - name: Dependencies [Linux&macOS]
       if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
