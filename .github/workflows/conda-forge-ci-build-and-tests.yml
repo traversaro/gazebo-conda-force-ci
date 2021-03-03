@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         build_type: [Release]
-        os: [macOS-10.15]
+        os: [ubuntu-20.04, macOS-10.15]
       fail-fast: false
 
     steps:
@@ -51,7 +51,7 @@ jobs:
       if: contains(matrix.os, 'macos') || contains(matrix.os, 'ubuntu')
       shell: bash -l {0}
       run: |
-        mamba install libuuid
+        mamba install libuuid expat-cos6-x86_64 libselinux-cos6-x86_64 libxau-cos6-x86_64 libxcb-cos6-x86_64 libxdamage-cos6-x86_64 libxext-cos6-x86_64 libxfixes-cos6-x86_64 libxxf86vm-cos6-x86_64 mesalib mesa-libgl-cos6-x86_64
 
     - name: Dependencies [macOS]
       if: contains(matrix.os, 'macos')
