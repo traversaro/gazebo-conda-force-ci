@@ -29,6 +29,7 @@ jobs:
         cd gazebo
         git checkout patch-12
 
+
     - uses: conda-incubator/setup-miniconda@v2
       with:
         mamba-version: "*"
